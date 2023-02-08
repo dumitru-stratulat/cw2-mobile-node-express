@@ -50,8 +50,9 @@ app.put('/updateLessonSpace', jsonParser, async (request, response) => {
 	response.json(log);
 });
 
-//Start the app listening on port 8080
-app.listen(8080);
+const port = process.env.PORT || 3000;
+app.listen(port);
+
 
 //Export server for testing
 module.exports = app;
